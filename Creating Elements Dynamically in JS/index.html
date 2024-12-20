@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Element Dynamically</title>
+</head>
+<body>
+    <h1> Creating a new Element (paragraph inside div) </h1>
+
+    <h2> Learnings : createElement(), appendChild()
+    </h2>
+
+    <h2 id="para"> This is how to create elements using appendChild. </h2>
+
+    <input type="text" id="name-input" placeholder="Enter your name here"> 
+    <button id="click-button">Click Me</button>
+
+</body>
+
+<script>
+    const button=document.getElementById('click-button');
+    const para=document.getElementById('para');
+    const input=document.getElementById('name-input');
+
+    button.addEventListener('click',()=>{
+        const name=input.value;
+        const p=document.createElement('p');
+        p.textContent=name;
+        para.appendChild(p);
+    });
+
+</script>
+</html>
