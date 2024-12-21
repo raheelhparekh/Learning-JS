@@ -1,9 +1,5 @@
-# Javascript-in-depth
+# Advance JS Concepts
 
-// for IF conditions
-
-// falsy values in JS
-false,0,-0,BigInt,"",null,undefined,NaN
-
-// truthy values
-true,"0",'false',[]," ",{},function(){}
+> Weather API Integration -> asking user to enter city and fetching weather
+> Geolocation Fetch -> asking user to click on allow location access and fetching its longitude & latitude and fetching the current weather
+> Local Storage Concept in JS
