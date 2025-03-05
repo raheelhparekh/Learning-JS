@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom | edit and remove elements</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: bisque;
+    }
+  </style>
+  <body>
+    <ul class="language">
+      <li>Javascript</li>
+    </ul>
+  </body>
+  <script>
+    function addLanguage(lang) {
+      const li = document.createElement("li");
+      li.innerHTML = `${lang}`;
+      document.querySelector(".language").appendChild(li);
+    }
+    addLanguage("Python");
+    addLanguage("Java");
+
+    // optimised approach to add language
+    function addLanguageOptimised(lang) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(lang));
+      document.querySelector(".language").appendChild(li);
+    }
+    addLanguageOptimised("C++");
+
+    // edit language
+    const li = document.querySelector("li:nth-child(2)");
+    // li.innerHTML="C#";  // innerHtml takes alot of space and time when multiple values. therefore an optimised approach should be used
+
+    const newLi = document.createElement("li");
+    newLi.textContent = "C#";
+    li.replaceWith(newLi);
+
+    // edit first language
+    const firstLi = document.querySelector("li:nth-child(1)");; 
+    const newFirstLi = document.createElement("li");
+    newFirstLi.textContent = "Typescript";
+    firstLi.replaceWith(newFirstLi);
+
+
+    // remove language
+    const removeLi = document.querySelector("li:nth-child(3)");
+    removeLi.remove();
+
+  </script>
+</html>

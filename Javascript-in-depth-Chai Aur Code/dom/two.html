@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom more details</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: yellow;
+
+        }
+        
+    </style>
+</head>
+<body>
+    
+    
+</body>
+<script>
+    // creating an element using javascript
+    const div=document.createElement('div');
+    console.log(div); // <div></div>
+
+    div.className='new'; // <div class="new"></div>
+    div.id='newId'; // <div class="new" id="newId"></div>
+
+    div.setAttribute('title','new title'); // <div class="new" id="newId" title="new title"></div>
+    div.style.backgroundColor='red'; // <div class="new" id="newId" title="new title" style="background-color: red;"></div>
+    div.style.padding="15px"
+    // div.innerText='Heelo, Im Raheel'; // <div class="new" id="newId" title="new title" style="background-color: red;">Heelo, Im Raheel</div>
+
+    const text=document.createTextNode('Hello, Im Raheel');
+    div.appendChild(text); // <div class="new" id="newId" title="new title" style="background-color: red;">Hello, Im Raheel</div>
+    document.body.appendChild(div);
+    
+    
+
+</script>
+</html>
