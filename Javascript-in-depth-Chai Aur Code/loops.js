@@ -21,7 +21,7 @@ for(let index in arr){
 // syntax of for each loop
 const coding=['JavaScript','Python','Ruby','C++'];
 
-coding.forEach(function(item){ // syntax` forEach(function(item){})`
+coding.forEach(function(item){ // syntax forEach(function(callback){})`
     console.log(item)
 })
 

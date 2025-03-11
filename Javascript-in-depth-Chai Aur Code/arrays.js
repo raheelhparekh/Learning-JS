@@ -1,5 +1,5 @@
 let arr=[1,2,3,4,5]
-console.log(arr)
+console.log(typeof arr) // Objects
 
 let newArr=arr.join() // join() method converts the elements of an array into a string
 console.log(newArr) // 1,2,3,4,5
